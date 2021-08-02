@@ -23,7 +23,7 @@ static void	set_flags_helper(char *format, t_printf *mystruct)
 			|| format[mystruct->index] == '+')
 		{
 			if (format[mystruct->index] == '#')
-				mystruct->flags.is_altarnate_form = true;
+				mystruct->flags.is_alternate_form = true;
 			else if (format[mystruct->index] == '0')
 				mystruct->flags.zero_padding = true;
 			else if (format[mystruct->index] == '-')
@@ -74,10 +74,10 @@ static void	handle_conversion(char conversion, t_printf *mystruct, va_list ap)
 		print_integer(mystruct, va_arg(ap, int));
 	else if (conversion == 'u')
 		print_unsigned(mystruct, va_arg(ap, unsigned int));
-	// else if (conversion == 'x' || conversion == 'X')
-	// 	print_hexa(mystruct, va_arg(ap, unsigned int), conversion);
-	// else if (conversion == '%')
-	// 	print_percent(mystruct);
+	else if (conversion == 'x' || conversion == 'X')
+		print_hexa(mystruct, va_arg(ap, unsigned int), conversion);
+	else if (conversion == '%')
+		print_percent(mystruct);
 }
 
 int	ft_printf(const char *format, ...)

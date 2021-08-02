@@ -15,7 +15,7 @@ CC = gcc
 NAME = a.out
 LIBNAME = libftprintf.a
 SRC = ft_printf.c ft_print_character.c ft_print_string.c ft_print_pointer.c \
-ft_print_integer.c ft_print_unsigned.c tester.c
+ft_print_integer.c ft_print_unsigned.c ft_print_hexa.c ft_print_percent.c tester.c
 OBJ = $(SRC:.c=.o)
 
 $(NAME): $(OBJ)
@@ -28,7 +28,7 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-.PHONY: fclean re
+.PHONY: fclean re bonus
 fclean:
 	$(MAKE) fclean --directory=Mylib
 	rm -f $(NAME)
@@ -36,3 +36,4 @@ re:
 	make fclean
 	make
 all: $(NAME)
+bonus: all

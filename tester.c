@@ -143,7 +143,71 @@
 // }
 
 // Unsigned test
+// int main()
+// {
+// 	printf("|%u|\n", 12);
+// }
+
+// Hexa (X) test
+// int main()
+// {
+// 	printf("|%#5.3x|\n", 123);
+// 	ft_printf("|%#5.3x|\n\n", 123);
+
+// 	printf("|%#-8.x|\n", 123);
+// 	ft_printf("|%#-8.x|\n\n", 123);
+
+// 	printf("|%#08.3x|\n", 123);
+// 	printf("|%#08.3x|\n", 123);
+
+// 	printf("|%#08x|\n", 123);
+// 	ft_printf("|%#08x|\n", 123);
+
+// 	printf("|%#08.x|\n", 0);
+// 	ft_printf("|%#08.x|\n", 0);
+
+// 	printf("|%#08.2x|\n", 1);
+// 	ft_printf("|%#08.2x|\n", 1);
+// }
+
+// Percent test
+// int main()
+// {
+// 	printf("|%#%|\n");
+// 	printf("|%3%|\n");
+// 	printf("|%-%|\n");
+// 	printf("|%-3%|\n");
+// 	printf("|%03%|\n");
+// 	printf("|%-03%|\n");
+// 	printf("|% %|\n");
+// 	printf("|%+%|\n");
+// 	printf("|%+ 03.6%|\n");
+// 	printf("|%+ 03.%|\n");
+// 	printf("|%+ 03.65%|\n");
+// 	printf("|%+ 03.08%|\n");
+// 	printf("|%.6%|\n");
+// 	printf("|%.%|\n");
+// 	printf("|%.65%|\n");
+// 	printf("|%.08%|\n");
+// 	printf("|%.1%|\n");
+// 	printf("|%.2%|\n");
+// }
+
+// Additional tests
 int main()
 {
-	printf("|%u|\n", 12);
+	printf("|c%#X-i|\n", 42000);
+	ft_printf("|c%#X-i|\n\n", 42000);
+
+	printf("|%p|\n", (void *)-1);
+	ft_printf("|%p|\n\n", (void *)-1);
+
+	printf("|--.%#Xs|\n", 0);
+	ft_printf("|--.%#Xs|\n\n", 0);
+
+	printf("|--.%#xs|\n", 0);
+	ft_printf("|--.%#xs|\n\n", 0);
+
+	printf("|--.%#.xs|\n", 0);
+	ft_printf("|--.%#.xs|\n\n", 0);
 }

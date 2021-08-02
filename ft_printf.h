@@ -23,7 +23,7 @@ typedef struct s_printf_flags
 	bool	zero_padding;
 	bool	is_there_precision;
 	int		precision;
-	bool	is_altarnate_form;
+	bool	is_alternate_form;
 	bool	is_space_prefixed;
 	bool	is_sign_prefixed;
 	int		min_field_width;
@@ -43,11 +43,19 @@ typedef struct s_pad_vars
 	int	n_len;
 }	t_pad_vars;
 
+typedef struct s_unsigned_int_and_char
+{
+	unsigned int	n;
+	char			c;
+}	t_unsigned_int_and_char;
+
 int		ft_printf(const char *format, ...);
 void	print_character(t_printf *mystruct, unsigned char c);
 void	print_string(t_printf *mystruct, char *str);
 void 	print_pointer(t_printf *mystruct, unsigned long addr);
 void	print_integer(t_printf *mystruct, int n);
 void	print_unsigned(t_printf *mystruct, unsigned int n);
+void	print_hexa(t_printf *mystruct, unsigned int n, char conversion);
+void	print_percent(t_printf *mystruct);
 
 #endif
